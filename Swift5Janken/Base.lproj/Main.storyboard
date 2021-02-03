@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swift5Janken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HdH-iT-Nxi">
+                                <rect key="frame" x="67" y="93" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="6eU-jD-CvT"/>
+                                    <constraint firstAttribute="width" constant="240" id="ePd-yx-hLF"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMv-hr-UeY">
+                                <rect key="frame" x="137" y="586" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Sa5-as-ahu"/>
+                                    <constraint firstAttribute="width" constant="100" id="gdw-2O-aCB"/>
+                                </constraints>
+                                <state key="normal" image="1"/>
+                                <connections>
+                                    <action selector="jankenBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a3M-fF-8cV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aro-fm-Tds">
+                                <rect key="frame" x="0.0" y="586" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="M23-ne-cpq"/>
+                                    <constraint firstAttribute="height" constant="100" id="jbo-3Q-mod"/>
+                                </constraints>
+                                <state key="normal" image="0"/>
+                                <connections>
+                                    <action selector="jankenBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hB6-Wb-Pl9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdS-Hg-Vp9">
+                                <rect key="frame" x="67" y="429" width="240" height="52"/>
+                                <color key="backgroundColor" red="0.19086469549999999" green="1" blue="0.37637408789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="n8Z-6R-APY"/>
+                                    <constraint firstAttribute="height" constant="52" id="wFj-ux-y7f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="じゃんけんをする！">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="janken:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eiH-Fo-WHW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1M-iU-80y">
+                                <rect key="frame" x="275" y="586" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="796-1y-dg1"/>
+                                    <constraint firstAttribute="height" constant="100" id="C3E-ph-c7z"/>
+                                </constraints>
+                                <state key="normal" image="2"/>
+                                <connections>
+                                    <action selector="jankenBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UbC-Yu-fGS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="e1M-iU-80y" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3fQ-Kj-nKG"/>
+                            <constraint firstItem="e1M-iU-80y" firstAttribute="leading" secondItem="uMv-hr-UeY" secondAttribute="trailing" constant="38" id="8wl-We-kdQ"/>
+                            <constraint firstItem="e1M-iU-80y" firstAttribute="top" secondItem="GdS-Hg-Vp9" secondAttribute="bottom" constant="105" id="COz-Z8-LdW"/>
+                            <constraint firstItem="aro-fm-Tds" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LAw-0E-PY1"/>
+                            <constraint firstItem="HdH-iT-Nxi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="Qk8-Q5-56Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HdH-iT-Nxi" secondAttribute="trailing" constant="68" id="Sdc-E6-tE2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="e1M-iU-80y" secondAttribute="bottom" constant="92" id="dfs-0V-sQu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aro-fm-Tds" secondAttribute="bottom" constant="92" id="fQK-u9-hGL"/>
+                            <constraint firstItem="aro-fm-Tds" firstAttribute="top" secondItem="GdS-Hg-Vp9" secondAttribute="bottom" constant="105" id="igF-s6-Gbv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uMv-hr-UeY" secondAttribute="bottom" constant="92" id="lcu-C8-65l"/>
+                            <constraint firstItem="HdH-iT-Nxi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="lp3-qM-yAg"/>
+                            <constraint firstItem="GdS-Hg-Vp9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="wk4-Ei-uM5"/>
+                            <constraint firstItem="uMv-hr-UeY" firstAttribute="leading" secondItem="aro-fm-Tds" secondAttribute="trailing" constant="37" id="xWt-lz-qc6"/>
+                            <constraint firstItem="GdS-Hg-Vp9" firstAttribute="top" secondItem="HdH-iT-Nxi" secondAttribute="bottom" constant="96" id="xd9-UY-Q6g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GdS-Hg-Vp9" secondAttribute="trailing" constant="68" id="yJh-Hz-dX1"/>
+                            <constraint firstItem="uMv-hr-UeY" firstAttribute="top" secondItem="GdS-Hg-Vp9" secondAttribute="bottom" constant="105" id="ypA-HN-V7O"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="choki" destination="uMv-hr-UeY" id="A5C-vm-0PC"/>
+                        <outlet property="goo" destination="aro-fm-Tds" id="oYz-9o-xv9"/>
+                        <outlet property="imageView" destination="HdH-iT-Nxi" id="aQP-z5-RkI"/>
+                        <outlet property="janken" destination="GdS-Hg-Vp9" id="cD2-v1-Vdb"/>
+                        <outlet property="par" destination="e1M-iU-80y" id="2AV-Ad-bUm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="93.842364532019715"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="0" width="750" height="706"/>
+        <image name="1" width="591" height="750"/>
+        <image name="2" width="701" height="750"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
