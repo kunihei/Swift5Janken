@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZZ0-4n-lzd">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,6 +8,72 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="dR5-Ie-PKW">
+            <objects>
+                <viewController id="ZZ0-4n-lzd" customClass="MenuViewController" customModule="Swift5Janken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fY2-3a-QBJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUa-ba-FFM">
+                                <rect key="frame" x="0.0" y="354" width="375" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.47870289910000002" green="1" blue="0.63676758460000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="じゃんけんゲーム">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="jankenBtn:" destination="ZZ0-4n-lzd" eventType="touchUpInside" id="0m4-oN-TwY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZk-dr-vuF">
+                                <rect key="frame" x="0.0" y="611" width="375" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.28263611430000002" blue="0.5861595932" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="爆弾ゲーム">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="bomBtn:" destination="ZZ0-4n-lzd" eventType="touchUpInside" id="i5n-iO-Dp7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ゲームを選んで下さい！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M69-tH-NBA">
+                                <rect key="frame" x="0.0" y="116" width="375" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CZ-Un-zed">
+                                <rect key="frame" x="0.0" y="484" width="375" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="数大小ゲーム">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="kazuBtn:" destination="ZZ0-4n-lzd" eventType="touchUpInside" id="mOZ-pK-Izf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2dr-MO-249"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="janken" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="WSj-9V-zAH"/>
+                        <segue destination="eYh-qW-yZf" kind="presentation" identifier="kazu" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="hzl-ur-8yj"/>
+                        <segue destination="Q6W-AS-jQo" kind="presentation" identifier="bom" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="mdH-NZ-X1M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u3a-2C-V7P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-693.60000000000002" y="93.842364532019715"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -71,30 +137,17 @@
                                     <action selector="jankenBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UbC-Yu-fGS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsG-vC-qee">
-                                <rect key="frame" x="221" y="709" width="138" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.30602362329999999" green="0.79934570169999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <size key="titleShadowOffset" width="10" height="10"/>
-                                <state key="normal" title="数勝負">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="jamp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UY0-ch-xZv"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zce-q4-Lkb">
-                                <rect key="frame" x="16" y="709" width="122" height="46"/>
+                                <rect key="frame" x="16" y="709" width="84" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.28263611430000002" blue="0.5861595932" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <state key="normal" title="爆弾ゲーム">
+                                <color key="backgroundColor" red="0.53117750789999996" green="0.46976448329999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="戻る">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" red="0.38767036249999998" green="0.2245603776" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="bomBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MgK-Hu-Y21"/>
+                                    <action selector="back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lUV-xN-1ie"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -122,13 +175,10 @@
                     <connections>
                         <outlet property="bomButton" destination="Zce-q4-Lkb" id="8ir-AZ-NgD"/>
                         <outlet property="choki" destination="uMv-hr-UeY" id="A5C-vm-0PC"/>
-                        <outlet property="countBtn" destination="fsG-vC-qee" id="sSV-vW-LKU"/>
                         <outlet property="goo" destination="aro-fm-Tds" id="oYz-9o-xv9"/>
                         <outlet property="imageView" destination="HdH-iT-Nxi" id="aQP-z5-RkI"/>
                         <outlet property="janken" destination="GdS-Hg-Vp9" id="cD2-v1-Vdb"/>
                         <outlet property="par" destination="e1M-iU-80y" id="2AV-Ad-bUm"/>
-                        <segue destination="eYh-qW-yZf" kind="presentation" identifier="next" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="A1n-v0-B7G"/>
-                        <segue destination="Q6W-AS-jQo" kind="presentation" identifier="bom" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="DDe-d9-Wdy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -381,8 +431,14 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
