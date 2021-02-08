@@ -8,11 +8,18 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-
+    
+    @IBOutlet weak var janBtn: UIButton!
+    @IBOutlet weak var kazuButton: UIButton!
+    @IBOutlet weak var bomButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        janBtn.layer.cornerRadius = 5.0
+        kazuButton.layer.cornerRadius = 5.0
+        bomButton.layer.cornerRadius = 5.0
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func jankenBtn(_ sender: Any) {
