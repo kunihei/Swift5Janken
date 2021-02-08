@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var choki: UIButton!
     @IBOutlet weak var goo: UIButton!
     @IBOutlet weak var janken: UIButton!
+    @IBOutlet weak var countBtn: UIButton!
+    @IBOutlet weak var bomButton: UIButton!
     
     var timer = Timer()
     var count = Int()
@@ -25,6 +27,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        bomButton.layer.cornerRadius = 10.0
+        countBtn.layer.cornerRadius = 10.0
         par.isEnabled = false
         choki.isEnabled = false
         goo.isEnabled = false
@@ -62,7 +66,7 @@ class ViewController: UIViewController {
     
     @IBAction func janken(_ sender: Any) {
         
-        janken.isEnabled = false
+        janken.isHidden = true
         par.isEnabled = true
         choki.isEnabled = true
         goo.isEnabled = true
@@ -72,7 +76,7 @@ class ViewController: UIViewController {
     
     @IBAction func jankenBtn(_ sender: Any) {
         
-        janken.isEnabled = true
+        janken.isHidden = false
         if let button = sender as? UIButton {
             if let tag = actionTag(rawValue: button.tag) {
                 switch tag {
@@ -129,5 +133,15 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func jamp(_ sender: Any) {
+        performSegue(withIdentifier: "next", sender: nil)
+    }
+    
+    @IBAction func bomBtn(_ sender: Any) {
+        performSegue(withIdentifier: "bom", sender: nil)
+    }
+    
+    
 }
 
