@@ -23,6 +23,11 @@ class ResultList{
         resultList.append(ResultModel(result1: "塩をいれた水で氷を作る", result2: "沸騰したお湯をいれて氷を作る", result3: "砂糖をいれた水で氷を作る", result4: "お酢をいれた水で氷りを作る"))
         resultList.append(ResultModel(result1: "目をパチパチさせる", result2: "爪をかじる", result3: "念入りに手を洗う", result4: "くしゃみをしたあとに、「大魔王」という"))
         resultList.append(ResultModel(result1: "あくび", result2: "おなら", result3: "まばたき", result4: "くしゃみ"))
+        resultList.append(ResultModel(result1: "走っている時", result2: "ご飯を食べている時", result3: "眠っている時", result4: "おしっこをしている時"))
+        resultList.append(ResultModel(result1: "醤油", result2: "砂糖", result3: "小麦粉", result4: "片栗粉"))
+        resultList.append(ResultModel(result1: "血液型", result2: "脳みそ", result3: "心臓", result4: "髪の毛"))
+        resultList.append(ResultModel(result1: "風車", result2: "十字架", result3: "ハート", result4: "心臓"))
+        resultList.append(ResultModel(result1: "ゆっくりする", result2: "力を込めてする", result3: "力を弱めてする", result4: "早くする"))
 
     }
     

@@ -53,6 +53,7 @@ class QuestionViewController: UIViewController {
         
     }
     
+    //画面戻ってきた時に発動するメソッド
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         correctCount = 0
@@ -72,6 +73,7 @@ class QuestionViewController: UIViewController {
         
     }
     
+    //正解表示後２回目のボタンが押せなくなるようにするメソッド
     func resultIsEnabled(){
         
         for i in 0..<buttonArray.count{
@@ -82,6 +84,7 @@ class QuestionViewController: UIViewController {
         
     }
     
+    //正解だけを表示するメソッド
     func resultHidden(){
         for i in 0..<buttonArray.count{
             if buttonArray[i].currentTitle != correctAnswer{
@@ -119,6 +122,7 @@ class QuestionViewController: UIViewController {
         }
     }
     
+    //ボタンをシャッフルして表示
     func setBtton(){
         for i in 0..<array.count{
             let idx = Int(arc4random() % UInt32(array.count))
@@ -133,6 +137,7 @@ class QuestionViewController: UIViewController {
         correctAnswer = quizList.list[QuizCount].answer
     }
     
+    //最後の問題の時に発動するメソッド
     func lastQuiz(){
         if QuizCount == quizList.list.count - 1{
             questionLabel.text = "問題終了"
@@ -143,6 +148,7 @@ class QuestionViewController: UIViewController {
         }
     }
     
+    //画面遷移時、値を渡す
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "result"{
             let resultVC = segue.destination as! ResultViewController
@@ -152,24 +158,28 @@ class QuestionViewController: UIViewController {
         }
     }
     
+    //次の問題に移るためのメソッド
     func nextQuiz(){
         
         if QuizCount < quizList.list.count - 1{
             QuizCount += 1
             
+            //問題を表示させる
             textView.text = quizList.list[QuizCount].quizText
             
+            //ボタンのテキストを表示させるための配列
             answerArray = [resultList.resultList[QuizCount].result1Text,resultList.resultList[QuizCount].result2Text,resultList.resultList[QuizCount].result3Text,resultList.resultList[QuizCount].result4Text]
             questionLabel.text = "問題\(QuizCount + 1)"
         }
         
     }
-    
+    //次の問題へボタンを押下時、発動する
     @IBAction func next(_ sender: Any) {
         
         nextQuiz()
         setBtton()
         
+        //消えたボタンと押せなくなったボタンを再度使えるようにする
         for i in 0..<buttonArray.count{
             buttonArray[i].isHidden = false
             buttonArray[i].isEnabled = true
