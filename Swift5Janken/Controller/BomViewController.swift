@@ -21,18 +21,28 @@ class BomViewController: UIViewController {
     @IBOutlet weak var bomBtn9: UIButton!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var resetBtn: UIButton!
+    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var startBtn: UIButton!
     
-    var count = arc4random_uniform(9) + 1
+    var count = Int()
     var btnArray:[UIButton] = [UIButton]()
+    var countDownNum = 3
+    var timer:Timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        timerLabel.text = "残り時間：\(countDownNum)"
         resultLabel.layer.cornerRadius = 5.0
         resultLabel.clipsToBounds = true
         backBtn.layer.cornerRadius = 10.0
+        startBtn.layer.cornerRadius = 10.0
         resetBtn.layer.cornerRadius = 10.0
         btnArray = [bomBtn1,bomBtn2,bomBtn3,bomBtn4,bomBtn5,bomBtn6,bomBtn7,bomBtn8,bomBtn9]
+        for i in 0...8{
+            btnArray[i].isEnabled = false
+        }
+        resetBtn.isHidden = true
     }
     
     func result(){
@@ -51,9 +61,13 @@ class BomViewController: UIViewController {
                 
                 if (sender as AnyObject).tag == count{
                     resultLabel.text = "アウト"
+                    resultLabel.backgroundColor = .red
+                    timer.invalidate()
                     result()
                 }else{
                     resultLabel.text = "セーフ"
+                    resultLabel.backgroundColor = .blue
+                    countDownNum = 4
                     for e in 0...8{
                         if e == (sender as AnyObject).tag - 1{
                             btnArray[e].isHidden = true
@@ -67,11 +81,42 @@ class BomViewController: UIViewController {
     @IBAction func reset(_ sender: Any) {
         for i in 0...8{
             btnArray[i].isHidden = false
+            btnArray[i].isEnabled = false
         }
+        countDownNum = 3
+        timer.invalidate()
         resultLabel.text = "結果"
-        count = arc4random_uniform(9) + 1
+        timerLabel.text = "残り時間：\(countDownNum)"
+        resultLabel.backgroundColor = .systemBlue
+        resetBtn.isHidden = true
+        startBtn.isHidden = false
     }
     
+    @IBAction func start(_ sender: Any) {
+        for i in 0...8{
+            btnArray[i].isEnabled = true
+        }
+        timer = Timer.scheduledTimer(timeInterval: 0.9, target:self, selector:#selector(countDown), userInfo:nil, repeats:true)
+        count = Int(arc4random_uniform(9) + 1)
+        resetBtn.isHidden = false
+        startBtn.isHidden = true
+        
+    }
+    
+    @objc func countDown(){
+            countDownNum -= 1
+            if(countDownNum > 0) {
+                timerLabel.text = "残り時間：\(countDownNum)"
+            } else {
+                timerLabel.text = "残り時間：0"
+                resultLabel.text = "時間切れ‼︎"
+                resultLabel.backgroundColor = .systemRed
+                for i in 0...8{
+                    btnArray[i].isEnabled = false
+                }
+                timer.invalidate()
+            }
+        }
     
     
     @IBAction func back(_ sender: Any) {

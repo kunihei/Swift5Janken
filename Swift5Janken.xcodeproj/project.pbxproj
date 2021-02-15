@@ -8,18 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		BA262DE325CE185B0089D1DF /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA262DE225CE185B0089D1DF /* NextViewController.swift */; };
+		BA43808025D9535800238597 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43807F25D9535800238597 /* ResultViewController.swift */; };
+		BA57704625D82F7900207378 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA57704525D82F7900207378 /* ResultModel.swift */; };
+		BA57704925D8361800207378 /* ResultList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA57704825D8361800207378 /* ResultList.swift */; };
 		BA65179125C4BEB6001BEDE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA65179025C4BEB6001BEDE3 /* AppDelegate.swift */; };
 		BA65179325C4BEB6001BEDE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA65179225C4BEB6001BEDE3 /* SceneDelegate.swift */; };
 		BA65179525C4BEB6001BEDE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA65179425C4BEB6001BEDE3 /* ViewController.swift */; };
 		BA65179825C4BEB6001BEDE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA65179625C4BEB6001BEDE3 /* Main.storyboard */; };
 		BA65179A25C4BEB7001BEDE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA65179925C4BEB7001BEDE3 /* Assets.xcassets */; };
 		BA65179D25C4BEB7001BEDE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA65179B25C4BEB7001BEDE3 /* LaunchScreen.storyboard */; };
+		BA70E8E025D76D9300ED872A /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA70E8DF25D76D9300ED872A /* QuizModel.swift */; };
+		BA70E8E425D76E4100ED872A /* QuizList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA70E8E325D76E4100ED872A /* QuizList.swift */; };
+		BAB05A2025D54A3400294BBB /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB05A1F25D54A3400294BBB /* QuestionViewController.swift */; };
+		BAB1B04225D4D11A006FDFD7 /* SuccerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1B04125D4D11A006FDFD7 /* SuccerViewController.swift */; };
+		BACC99DA25DA0A19005F4620 /* ChangeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACC99D925DA0A19005F4620 /* ChangeColor.swift */; };
 		BACCC39825D10A2F0021202C /* BomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACCC39725D10A2F0021202C /* BomViewController.swift */; };
 		BAEA649225D13E110000D1AC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEA649125D13E110000D1AC /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BA262DE225CE185B0089D1DF /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		BA43807F25D9535800238597 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		BA57704525D82F7900207378 /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
+		BA57704825D8361800207378 /* ResultList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultList.swift; sourceTree = "<group>"; };
 		BA65178D25C4BEB6001BEDE3 /* Swift5Janken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift5Janken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA65179025C4BEB6001BEDE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA65179225C4BEB6001BEDE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +39,11 @@
 		BA65179925C4BEB7001BEDE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA65179C25C4BEB7001BEDE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA65179E25C4BEB7001BEDE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA70E8DF25D76D9300ED872A /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
+		BA70E8E325D76E4100ED872A /* QuizList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizList.swift; sourceTree = "<group>"; };
+		BAB05A1F25D54A3400294BBB /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		BAB1B04125D4D11A006FDFD7 /* SuccerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccerViewController.swift; sourceTree = "<group>"; };
+		BACC99D925DA0A19005F4620 /* ChangeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeColor.swift; sourceTree = "<group>"; };
 		BACCC39725D10A2F0021202C /* BomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BomViewController.swift; sourceTree = "<group>"; };
 		BAEA649125D13E110000D1AC /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,16 +80,48 @@
 			children = (
 				BA65179025C4BEB6001BEDE3 /* AppDelegate.swift */,
 				BA65179225C4BEB6001BEDE3 /* SceneDelegate.swift */,
-				BA65179425C4BEB6001BEDE3 /* ViewController.swift */,
-				BA262DE225CE185B0089D1DF /* NextViewController.swift */,
-				BACCC39725D10A2F0021202C /* BomViewController.swift */,
-				BAEA649125D13E110000D1AC /* MenuViewController.swift */,
-				BA65179625C4BEB6001BEDE3 /* Main.storyboard */,
-				BA65179925C4BEB7001BEDE3 /* Assets.xcassets */,
+				BA70E8DE25D76BEA00ED872A /* Model */,
+				BAB05A1B25D5495D00294BBB /* Controller */,
+				BAB05A1E25D5497A00294BBB /* View */,
 				BA65179B25C4BEB7001BEDE3 /* LaunchScreen.storyboard */,
 				BA65179E25C4BEB7001BEDE3 /* Info.plist */,
 			);
 			path = Swift5Janken;
+			sourceTree = "<group>";
+		};
+		BA70E8DE25D76BEA00ED872A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA70E8DF25D76D9300ED872A /* QuizModel.swift */,
+				BA70E8E325D76E4100ED872A /* QuizList.swift */,
+				BA57704525D82F7900207378 /* ResultModel.swift */,
+				BA57704825D8361800207378 /* ResultList.swift */,
+				BACC99D925DA0A19005F4620 /* ChangeColor.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BAB05A1B25D5495D00294BBB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BA262DE225CE185B0089D1DF /* NextViewController.swift */,
+				BACCC39725D10A2F0021202C /* BomViewController.swift */,
+				BAEA649125D13E110000D1AC /* MenuViewController.swift */,
+				BAB1B04125D4D11A006FDFD7 /* SuccerViewController.swift */,
+				BA65179425C4BEB6001BEDE3 /* ViewController.swift */,
+				BAB05A1F25D54A3400294BBB /* QuestionViewController.swift */,
+				BA43807F25D9535800238597 /* ResultViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BAB05A1E25D5497A00294BBB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA65179625C4BEB6001BEDE3 /* Main.storyboard */,
+				BA65179925C4BEB7001BEDE3 /* Assets.xcassets */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,12 +194,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA43808025D9535800238597 /* ResultViewController.swift in Sources */,
+				BA70E8E425D76E4100ED872A /* QuizList.swift in Sources */,
 				BA65179525C4BEB6001BEDE3 /* ViewController.swift in Sources */,
 				BAEA649225D13E110000D1AC /* MenuViewController.swift in Sources */,
 				BA262DE325CE185B0089D1DF /* NextViewController.swift in Sources */,
 				BA65179125C4BEB6001BEDE3 /* AppDelegate.swift in Sources */,
+				BA70E8E025D76D9300ED872A /* QuizModel.swift in Sources */,
+				BA57704925D8361800207378 /* ResultList.swift in Sources */,
 				BACCC39825D10A2F0021202C /* BomViewController.swift in Sources */,
 				BA65179325C4BEB6001BEDE3 /* SceneDelegate.swift in Sources */,
+				BA57704625D82F7900207378 /* ResultModel.swift in Sources */,
+				BAB05A2025D54A3400294BBB /* QuestionViewController.swift in Sources */,
+				BAB1B04225D4D11A006FDFD7 /* SuccerViewController.swift in Sources */,
+				BACC99DA25DA0A19005F4620 /* ChangeColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

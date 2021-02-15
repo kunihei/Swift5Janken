@@ -27,11 +27,17 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func kazuBtn(_ sender: Any) {
+        
         performSegue(withIdentifier: "kazu", sender: nil)
+        
     }
     
     @IBAction func bomBtn(_ sender: Any) {
         performSegue(withIdentifier: "bom", sender: nil)
+    }
+    
+    @IBAction func quizBtn(_ sender: Any) {
+        performSegue(withIdentifier: "quiz", sender: nil)
     }
     
     /*
