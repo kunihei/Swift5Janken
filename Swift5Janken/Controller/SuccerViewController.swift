@@ -39,17 +39,20 @@ class SuccerViewController: UIViewController {
 }
 
 class GameScene: SKScene{
-    
+    let c = SKShapeNode(circleOfRadius: 50)
     let sb = SKLabelNode(text: "⚽️")
     override func didMove(to view: SKView) {
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
-        physicsWorld.gravity = CGVector(dx: 0.0, dy: -0.2)
+        physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
         sb.fontSize = 50
         sb.position = CGPoint(x: frame.midX, y: CGFloat(h - 100))
         sb.physicsBody = SKPhysicsBody(circleOfRadius: sb.frame.width / 2)
         sb.physicsBody?.isDynamic = true
         sb.physicsBody?.restitution = 0.8
         addChild(sb)
+        
+        
+        
         let g = SKLabelNode(text: "🥅")
         g.fontSize = 150
         g.position = CGPoint(x: frame.midX, y: CGFloat(h - 120))

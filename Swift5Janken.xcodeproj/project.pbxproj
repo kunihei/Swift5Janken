@@ -23,6 +23,7 @@
 		BAB1B04225D4D11A006FDFD7 /* SuccerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1B04125D4D11A006FDFD7 /* SuccerViewController.swift */; };
 		BACC99DA25DA0A19005F4620 /* ChangeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACC99D925DA0A19005F4620 /* ChangeColor.swift */; };
 		BACCC39825D10A2F0021202C /* BomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACCC39725D10A2F0021202C /* BomViewController.swift */; };
+		BAD5BC0F25DBF2A700D421FE /* kurage.mov in Resources */ = {isa = PBXBuildFile; fileRef = BAD5BC0E25DBF2A700D421FE /* kurage.mov */; };
 		BAEA649225D13E110000D1AC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEA649125D13E110000D1AC /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		BAB1B04125D4D11A006FDFD7 /* SuccerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccerViewController.swift; sourceTree = "<group>"; };
 		BACC99D925DA0A19005F4620 /* ChangeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeColor.swift; sourceTree = "<group>"; };
 		BACCC39725D10A2F0021202C /* BomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BomViewController.swift; sourceTree = "<group>"; };
+		BAD5BC0E25DBF2A700D421FE /* kurage.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = kurage.mov; sourceTree = "<group>"; };
 		BAEA649125D13E110000D1AC /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 				BAB05A1E25D5497A00294BBB /* View */,
 				BA65179B25C4BEB7001BEDE3 /* LaunchScreen.storyboard */,
 				BA65179E25C4BEB7001BEDE3 /* Info.plist */,
+				BAD5BC0E25DBF2A700D421FE /* kurage.mov */,
 			);
 			path = Swift5Janken;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA65179D25C4BEB7001BEDE3 /* LaunchScreen.storyboard in Resources */,
+				BAD5BC0F25DBF2A700D421FE /* kurage.mov in Resources */,
 				BA65179A25C4BEB7001BEDE3 /* Assets.xcassets in Resources */,
 				BA65179825C4BEB6001BEDE3 /* Main.storyboard in Resources */,
 			);

@@ -62,6 +62,7 @@ class BomViewController: UIViewController {
                 if (sender as AnyObject).tag == count{
                     resultLabel.text = "アウト"
                     resultLabel.backgroundColor = .red
+                    (sender as AnyObject).setTitle("💥", for: .normal)
                     timer.invalidate()
                     result()
                 }else{
@@ -82,6 +83,7 @@ class BomViewController: UIViewController {
         for i in 0...8{
             btnArray[i].isHidden = false
             btnArray[i].isEnabled = false
+            btnArray[i].setTitle("💣", for: .normal)
         }
         countDownNum = 3
         timer.invalidate()
@@ -113,6 +115,7 @@ class BomViewController: UIViewController {
                 resultLabel.backgroundColor = .systemRed
                 for i in 0...8{
                     btnArray[i].isEnabled = false
+                    btnArray[i].setTitle("💥", for: .normal)
                 }
                 timer.invalidate()
             }

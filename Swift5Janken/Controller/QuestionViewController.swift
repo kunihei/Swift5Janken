@@ -23,7 +23,7 @@ class QuestionViewController: UIViewController {
     let resultList = ResultList()
     
     var QuizCount = 0
-    var array = [0,1,2,3]
+    var array:[Int] = []
     var result:[Int] = []
     var answerArray = [String]()
     var correctAnswer = String()
@@ -124,6 +124,9 @@ class QuestionViewController: UIViewController {
     
     //ボタンをシャッフルして表示
     func setBtton(){
+        for e in 0..<buttonArray.count {
+            array.append(e)
+        }
         for i in 0..<array.count{
             let idx = Int(arc4random() % UInt32(array.count))
             result.append(array[idx])
